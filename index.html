@@ -1,0 +1,295 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmasters small projects</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://nordcdn.net/ds/css/3.1.1/nord.min.css">
+<link rel="stylesheet" href="https://nordcdn.net/ds/themes/8.0.1/nord.css">
+<body>
+    <link rel="stylesheet" href="https://nordcdn.net/ds/css/3.1.1/nord.min.css" integrity="sha384-zz2Vh/uaPtnKKnKq4a8aP/R7ybJEZD3LuwnvmLE+p42C+Zjr2R0Y+PKwdABWc61A" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://nordcdn.net/ds/tokens/7.0.1/tokens.custom-properties.css" integrity="sha384-G32Zv9loteV6mO9sQTAC01TtwnSz6uUOCwY0hxQZEhM/5XG8PMQMPXOb4ccP0iyG" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://nordcdn.net/ds/fonts/3.0.0/fonts.css" integrity="sha384-dkSLlcNlq50O3Ils6+x72v07BbSaUb10p9/GEuuIJBcR1d0Nn+lDdvUQoXYz2Dq9" crossorigin="anonymous" />
+
+<script type="module" src="https://nordcdn.net/ds/components/3.8.0/index.js" integrity="sha384-zvZDBl7G/h/0UeesdZH1CBfL9kfoMi+5/I28m8u8yCgzJC7kohDH3I6XgaMzYnLW" crossorigin="anonymous"></script>
+
+<nord-layout>
+  <nord-navigation slot="nav">
+    <nord-dropdown slot="header" expand>
+      <nord-button slot="toggle" expand>
+        <nord-avatar slot="start" name="Bath Clinic" variant="square">W</nord-avatar>
+        Webmasters
+      </nord-button>
+      <nord-dropdown-group heading="laura.williams@nordhealth.com">
+        <nord-dropdown-item>
+          <nord-avatar slot="start" name="Bath Clinic" size="s" variant="square">W</nord-avatar>
+          Bath Clinic
+          <nord-icon slot="end" name="interface-checked"></nord-icon>
+        </nord-dropdown-item>
+        <nord-dropdown-item>
+          <nord-avatar
+            slot="start"
+            name="Ocean Beach Clinic"
+            size="s"
+            variant="square"
+            style="--n-avatar-color: var(--n-color-status-success)"
+          >
+            O
+          </nord-avatar>
+          Ocean Beach Clinic
+        </nord-dropdown-item>
+        <nord-dropdown-item>
+          <nord-avatar
+            slot="start"
+            name="Park Animal Hospital"
+            size="s"
+            variant="square"
+            style="--n-avatar-color: var(--n-color-status-highlight)"
+          >
+            P
+          </nord-avatar>
+          Park Animal Hospital
+        </nord-dropdown-item>
+        <nord-dropdown-item>
+          <nord-avatar
+            slot="start"
+            name="Balboa Pet Hospital"
+            size="s"
+            variant="square"
+            style="--n-avatar-color: var(--n-color-status-danger)"
+          >
+            B
+          </nord-avatar>
+          Balboa Pet Hospital
+        </nord-dropdown-item>
+      </nord-dropdown-group>
+      <nord-dropdown-group>
+        <nord-dropdown-item>Add another clinic</nord-dropdown-item>
+        <nord-dropdown-item>Customize style</nord-dropdown-item>
+      </nord-dropdown-group>
+      <nord-dropdown-item>Sign out from all clinics</nord-dropdown-item>
+    </nord-dropdown>
+    <nord-nav-group heading="Workspace">
+      <nord-nav-item href="#" icon="navigation-dashboard">Dashboard</nord-nav-item>
+      <nord-nav-item icon="navigation-payments">
+        Payments
+        <nord-nav-group slot="subnav">
+          <nord-nav-item href="#">All transactions</nord-nav-item>
+          <nord-nav-item href="#">Payments</nord-nav-item>
+          <nord-nav-item href="#">Disputes</nord-nav-item>
+        </nord-nav-group>
+      </nord-nav-item>
+      <nord-nav-item icon="navigation-reports">
+        Reports
+        <nord-nav-group slot="subnav">
+          <nord-nav-item href="#" active>Payments</nord-nav-item>
+          <nord-nav-item href="#">Disputes</nord-nav-item>
+          <nord-nav-item href="#">Payouts</nord-nav-item>
+        </nord-nav-group>
+      </nord-nav-item>
+      <nord-nav-item href="#" icon="navigation-settings">Settings</nord-nav-item>
+    </nord-nav-group>
+    <nord-dropdown expand slot="footer">
+      <nord-button class="help-toggle" slot="toggle" expand>
+        <nord-icon slot="start" class="n-help-icon" size="m" name="interface-help"></nord-icon>
+        Help & support
+      </nord-button>
+      <nord-dropdown-group>
+        <nord-dropdown-item onclick="refresh()">Help center</nord-dropdown-item>
+        <nord-dropdown-item onclick="refresh()">Contact us</nord-dropdown-item>
+        <nord-dropdown-item onclick="refresh()">Support history</nord-dropdown-item>
+      </nord-dropdown-group>
+      <nord-dropdown-group>
+        <nord-dropdown-item onclick="refresh()">Getting started</nord-dropdown-item>
+        <nord-dropdown-item class="toggle-command-menu">
+          Keyboard commands
+          <div slot="end" class="n-color-text-weaker n-font-size-xs">Cmd+K</div>
+        </nord-dropdown-item>
+        <nord-dropdown-item onclick="refresh()">Tips & tricks</nord-dropdown-item>
+        <nord-dropdown-item onclick="refresh()">Updates</nord-dropdown-item>
+      </nord-dropdown-group>
+    </nord-dropdown>
+  </nord-navigation>
+
+  <nord-top-bar slot="top-bar">
+    <nord-input expand label="Search" hide-label type="search" placeholder="Search"></nord-input>
+
+    <nord-dropdown slot="end" align="start" position="block-end">
+      <nord-button slot="toggle" variant="plain" aria-describedby="notifications-tooltip">
+        <nord-icon name="navigation-notifications" size="m" color="rgba(255,255,255,0.85)"></nord-icon>
+        <div class="n-counter" aria-hidden="true" style="position: absolute">12</div>
+      </nord-button>
+      <h2 slot="header" class="n-typescale-l">
+        Notifications <span class="n-font-weight n-color-text-weaker">(12)</span>
+      </h2>
+      <nord-button slot="header-end" size="s" autofocus>Mark all as read</nord-button>
+      <nord-message unread highlight>
+        Ariel Salminen arrived to clinic with Pixie cat.
+        <span slot="footer">Just now at Nord Clinic</span>
+      </nord-message>
+      <nord-message unread>
+        New feature available! We’ve introduced a quick way to navigate between app views, actions, and more using a new
+        command menu.
+        <span slot="footer">12 minutes ago</span>
+      </nord-message>
+      <nord-message unread>
+        Nina Hallikainen arrived to clinic with Durante dog.
+        <span slot="footer">20 minutes ago at Nord Clinic</span>
+      </nord-message>
+      <nord-message unread>
+        David Darnes arrived to clinic with Norfryd cat.
+        <span slot="footer">2 hours ago at Nord Clinic</span>
+      </nord-message>
+      <nord-message unread>
+        Nick Williams arrived to clinic with Moog cat.
+        <span slot="footer">2 hours ago at Nord Clinic</span>
+      </nord-message>
+      <nord-message unread>
+        Eric Habich arrived to clinic with Zero cat.
+        <span slot="footer">4 hours ago at Nord Clinic</span>
+      </nord-message>
+      <nord-message unread>
+        Elvin van Eede arrived to clinic with Amoeba cat.
+        <span slot="footer">12 hours ago at Nord Clinic</span>
+      </nord-message>
+      <nord-dropdown-item>
+        See all notifications<nord-icon slot="end" name="arrow-right-long"></nord-icon>
+      </nord-dropdown-item>
+    </nord-dropdown>
+    <nord-tooltip id="notifications-tooltip">12 unread notifications</nord-tooltip>
+
+    <nord-dropdown slot="end" align="start" position="block-end">
+      <nord-button slot="toggle" variant="plain" aria-describedby="tasks-tooltip">
+        <nord-icon name="navigation-tasks" size="m" color="rgba(255,255,255,0.85)"></nord-icon>
+        <div class="n-counter" aria-hidden="true" style="position: absolute">4</div>
+      </nord-button>
+      <h2 slot="header" class="n-typescale-l">My tasks <span class="n-font-weight n-color-text-weaker">(4)</span></h2>
+      <nord-button slot="header-end" size="s" autofocus>
+        <nord-icon slot="start" size="xxs" name="interface-add-small"></nord-icon>
+        Create task
+      </nord-button>
+      <nord-message unread>
+        Make sure to ask details from John regarding yesterday’s patient who arrived late.
+        <span slot="footer">Finish by Wednesday, March 8</span>
+      </nord-message>
+      <nord-message unread>
+        Import new patients from Ocean Beach Clinic into the system.
+        <span slot="footer">Finish by Thursday, March 9</span>
+      </nord-message>
+      <nord-message unread>
+        Call David and ask about his cat’s wellbeing.
+        <span slot="footer">Finish by Thursday, March 9</span>
+      </nord-message>
+      <nord-message unread>
+        Call Anne and reschedule their visit.
+        <span slot="footer">Finish by Friday, March 10</span>
+      </nord-message>
+      <nord-dropdown-item> See all tasks<nord-icon slot="end" name="arrow-right-long"></nord-icon> </nord-dropdown-item>
+    </nord-dropdown>
+    <nord-tooltip id="tasks-tooltip">4 unfinished tasks</nord-tooltip>
+
+    <nord-dropdown slot="end">
+      <nord-button variant="plain" slot="toggle" aria-describedby="user-tooltip">
+        <nord-avatar style="transform: translateY(-1px)" name="Ariel Salminen">AS</nord-avatar>
+      </nord-button>
+      <nord-avatar slot="header" size="s" name="Ariel Salminen">AS</nord-avatar>
+      <p slot="header" class="n-color-text-weak n-font-size-s">
+        Signed in as <span class="n-font-weight-active">Ariel Salminen</span>
+      </p>
+      <nord-dropdown-group>
+        <nord-dropdown-item>My profile</nord-dropdown-item>
+        <nord-dropdown-item>Account Settings</nord-dropdown-item>
+        <nord-dropdown-item>Change password</nord-dropdown-item>
+      </nord-dropdown-group>
+      <nord-dropdown-group>
+        <nord-dropdown-item>
+          Keyboard commands
+          <div slot="end" class="n-color-text-weaker n-font-size-xs">Cmd+K</div>
+        </nord-dropdown-item>
+        <nord-dropdown-item>Help & Support</nord-dropdown-item>
+      </nord-dropdown-group>
+      <nord-dropdown-item>
+        Sign out
+        <nord-icon slot="end" name="interface-logout"></nord-icon>
+      </nord-dropdown-item>
+    </nord-dropdown>
+    <nord-tooltip id="user-tooltip">Ariel Salminen</nord-tooltip>
+  </nord-top-bar>
+
+  <nord-header slot="header">
+    <h1 class="n-typescale-l">Dashboard</h1>
+    <nord-button variant="primary" slot="end" size="s">
+      <nord-icon slot="start" name="interface-add-small"></nord-icon>
+      Create new
+    </nord-button>
+    <nord-tooltip id="export" position="block-end"> Export data as Spreadsheet </nord-tooltip>
+  </nord-header>
+  <nord-stack gap="l">
+    <nord-card>
+      <h2 slot="header">Card heading</h2>
+      <nord-banner variant="success">
+        Your order has been shipped and will arrive on May 27th. <a href="#">Track order</a>.
+      </nord-banner>
+    </nord-card>
+  </nord-stack>
+</nord-layout>
+<nord-command-menu></nord-command-menu>
+
+<script>
+  const layout = document.querySelector("nord-layout")
+  const commandMenu = document.querySelector("nord-command-menu")
+  commandMenu.commands = [
+    {
+      id: "toggle-nav",
+      title: "Toggle navigation",
+      icon: "navigation-toggle",
+      shortcut: "Alt+KeyL",
+      handler() {
+        layout.navOpen = !layout.navOpen
+      },
+    },
+  ]
+
+  // for demo purposes, activate nav items on click.
+  // in most cases you should instead integrate with your chosen router
+  const navigation = document.querySelector("nord-navigation")
+  navigation.addEventListener("click", e => {
+    if (e.target.matches("nord-nav-item") && e.target.href) {
+      e.target.active = true
+    }
+  })
+</script>
+
+<style>
+  .n-help-icon {
+    color: var(--n-color-text-weak);
+    margin-inline-start: calc(var(--n-space-s) / 2);
+    margin-inline-end: calc(var(--n-space-s) / 3);
+  }
+
+  .help-toggle:not(:focus-within) {
+    --n-button-border-color: transparent;
+  }
+
+  .help-toggle:hover {
+    --n-button-background-color: var(--n-color-nav-hover);
+    --n-button-color: var(--n-color-text);
+  }
+
+  .help-toggle:hover nord-icon {
+    color: var(--n-color-text);
+  }
+
+  @media (max-width: 768px) {
+    nord-top-bar nord-input[type="search"]:focus ~ nord-dropdown {
+      display: none;
+    }
+  }
+</style>
+
+<script src="script.js"></script>    
+</body>
+</html>
